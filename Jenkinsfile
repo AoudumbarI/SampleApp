@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo "Hello world"
+                echoh "Hello world"
                     }
             }
         }
@@ -31,10 +31,10 @@ pipeline {
                       color: '#439FE0',
                       message: "*STARTED:* By *${BUILD_USER}*   *Job_Name:* ${env.JOB_NAME}   *Build_No:* ${env.BUILD_NUMBER}"
   
-            slackSend channel: '#gocd-build-notifications',
-                      color: COLOR_MAP[currentBuild.currentResult],
-                      message: "*${currentBuild.currentResult}:* By *${BUILD_USER}*  *Job_Name:* ${env.JOB_NAME}  *Build_No:* ${env.BUILD_NUMBER} \n More Information At: <${env.BUILD_URL}|Click here>"  
-                }
+//             slackSend channel: '#gocd-build-notifications',
+//                       color: COLOR_MAP[currentBuild.currentResult],
+//                       message: "*${currentBuild.currentResult}:* By *${BUILD_USER}*  *Job_Name:* ${env.JOB_NAME}  *Build_No:* ${env.BUILD_NUMBER} \n More Information At: <${env.BUILD_URL}|Click here>"  
+//                 }
             }
     
 }
