@@ -29,7 +29,7 @@ pipeline {
                 BUILD_USER = getBuildUser()
             }
             slackSend channel: '#gocd-build-notifications',
-                      color: '#439FE0'
+                      color: '#439FE0',
                       message: "Started:by ${BUILD_USER} ${env.JOB_NAME} build ${env.BUILD_NUMBER}"
   
             slackSend channel: '#gocd-build-notifications',
