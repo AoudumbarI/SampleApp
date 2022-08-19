@@ -28,9 +28,9 @@ pipeline {
         }
     post{
         always{
-            script{
-                BUILD_USER = getBuildUser()
-            }
+//             script{
+//                 BUILD_USER = getBuildUser()
+//             }
               
             slackSend channel: '#gocd-build-notifications',
                       color: COLOR_MAP[currentBuild.currentResult],
