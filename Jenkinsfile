@@ -4,6 +4,7 @@ import groovy.json.JsonOutput
 def COLOR_MAP = [
     'SUCCESS' : 'good',
     'FAILURE' : 'danger'
+    'STARTED' :  '#00FF00'
     ]
 
 def getBuildUser(){
