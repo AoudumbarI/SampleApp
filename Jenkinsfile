@@ -28,7 +28,7 @@ pipeline {
             script{
                 BUILD_USER = getBuildUser()
                 {
-                slackSend channel: '#gocd-build-notifications',
+            slackSend channel: '#gocd-build-notifications',
                       color: COLOR_MAP[currentBuild.currentResult],
                       message: "Started:by ${BUILD_USER}"
                 }
