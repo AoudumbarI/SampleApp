@@ -3,8 +3,7 @@ import groovy.json.JsonOutput
 
 def COLOR_MAP = [
     'SUCCESS' : 'good',
-    'FAILURE' : 'danger',
-    'STARTED' :  '#439FE0'
+    'FAILURE' : 'danger'
     ]
 
 def getBuildUser(){
@@ -19,7 +18,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo "Hello world"
+                echoH "Hello world"
                     }
             }
         }
