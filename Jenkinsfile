@@ -30,7 +30,7 @@ pipeline {
             }
             slackSend channel: '#gocd-build-notifications',
                       color: '#439FE0',
-                      message: "Started: By ${BUILD_USER} \n Job_Name: ${env.JOB_NAME} \n Build_No: ${env.BUILD_NUMBER}"
+                      message: "*Started:* By ${BUILD_USER} \n *Job_Name:* ${env.JOB_NAME} \n *Build_No:* ${env.BUILD_NUMBER}"
   
             slackSend channel: '#gocd-build-notifications',
                       color: COLOR_MAP[currentBuild.currentResult],
