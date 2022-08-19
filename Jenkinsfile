@@ -2,7 +2,7 @@
 import groovy.json.JsonOutput
 
 def COLOR_MAP = [
-    'SUCCESS' : 'good',
+    'SUCCESS' : '#439FE0',
     'FAILURE' : 'danger',
     'STARTED' :  '#439FE0'
     ]
