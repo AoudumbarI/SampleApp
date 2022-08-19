@@ -4,7 +4,7 @@ import groovy.json.JsonOutput
 def COLOR_MAP = [
     'SUCCESS' : 'good',
     'FAILURE' : 'danger',
-    'STARTED' :  '#00FF00'
+    'STARTED' :  '#439FE0'
     ]
 
 def getBuildUser(){
@@ -34,7 +34,7 @@ pipeline {
   
             slackSend channel: '#gocd-build-notifications',
                       color: COLOR_MAP[currentBuild.currentResult],
-                      message: " ${BUILD_USER} *${currentBuild.currentResult}:* ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More Information At: ${env.BUILD_URL}"  
+                      message: "*${currentBuild.currentResult}:* By ${BUILD_USER} ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More Information At: ${env.BUILD_URL}"  
                 }
             }
     
