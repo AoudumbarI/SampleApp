@@ -22,7 +22,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echoh "Hello world"
+                echo "Hello world"
                     }
             }
         }
