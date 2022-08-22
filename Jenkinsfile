@@ -6,9 +6,9 @@ def COLOR_MAP = [
     'FAILURE' : 'danger'
     ]
 
-// def getBuildUser(){
-//     return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId()
-//     }
+def getBuildUser(){
+    return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId()
+    }
 
 slackSend channel: '#gocd-build-notifications',
                       color: '#439FE0',
