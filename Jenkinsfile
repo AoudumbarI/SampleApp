@@ -36,7 +36,7 @@ pipeline {
                       message: "*STARTED:* By *${currentBuild.getBuildCauses()[0].userId}*   *Job_Name:* ${env.JOB_NAME}   *Build_No:* ${env.BUILD_NUMBER}"
 
               
-            slackSend teamDomain: "techverito", okenCredentialId: "32065985-0e36-4265-bdd8-8fc1e942f4f4",channel: '#gocd-build-notifications',
+            slackSend teamDomain: "techverito", tokenCredentialId: "32065985-0e36-4265-bdd8-8fc1e942f4f4",channel: '#gocd-build-notifications',
                       color: COLOR_MAP[currentBuild.currentResult],
                       message: "*${currentBuild.currentResult}:* By *${currentBuild.getBuildCauses()[0].userId}*  *Job_Name:* ${env.JOB_NAME}  *Build_No:* ${env.BUILD_NUMBER} \n More Information At: <${env.BUILD_URL}|Click here>"  
                 }
