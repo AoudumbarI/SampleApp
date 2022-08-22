@@ -16,9 +16,9 @@ slackSend channel: '#gocd-build-notifications',
 
 pipeline {
     agent any
-    environment{
-      BUILD_USER = ''
-  }
+//     environment{
+//       BUILD_USER = ''
+//   }
     stages {
         stage('Hello') {
             steps {
