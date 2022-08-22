@@ -10,9 +10,9 @@ def getBuildUser(){
     return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId()
     }
 
-slackSend channel: '#gocd-build-notifications',
-                      color: '#439FE0',
-                      message: "*STARTED:* By *${currentBuild.getBuildCauses()[0].userId}*   *Job_Name:* ${env.JOB_NAME}   *Build_No:* ${env.BUILD_NUMBER}"
+// slackSend channel: '#gocd-build-notifications',
+//                       color: '#439FE0',
+//                       message: "*STARTED:* By *${currentBuild.getBuildCauses()[0].userId}*   *Job_Name:* ${env.JOB_NAME}   *Build_No:* ${env.BUILD_NUMBER}"
 
 pipeline {
     agent any
@@ -31,6 +31,10 @@ pipeline {
 //             script{
 //                 BUILD_USER = getBuildUser()
 //             }
+            slackSend channel: '#gocd-build-notifications',
+                      color: '#439FE0',
+                      message: "*STARTED:* By *${currentBuild.getBuildCauses()[0].userId}*   *Job_Name:* ${env.JOB_NAME}   *Build_No:* ${env.BUILD_NUMBER}"
+
               
             slackSend channel: '#gocd-build-notifications',
                       color: COLOR_MAP[currentBuild.currentResult],
